@@ -1,0 +1,11 @@
+Project assembly checks
+=======================
+- The copied robustdeepgmm.R is byte-identical to the file in the uploaded RSTM.zip.
+- The copied DGMM source files are byte-identical to the corresponding files in RSTM.zip.
+- All project R files passed a delimiter/string-aware static bracket-balance check.
+- No hard-coded Windows paths or setwd() calls remain in the assembled project scripts.
+- The GHST log-density formula was independently checked numerically outside R to approach the multivariate Student-t density as alpha -> 0.
+
+Execution limitation
+====================
+This sandbox does not contain an R/Rscript runtime, so the R smoke test and the full Monte Carlo experiments could not be executed here. Run scripts/00_install_packages.R, scripts/02_unit_tests.R, and scripts/01_smoke_test.R in an R environment before launching the R=1000 study. Numerical results have intentionally not been fabricated.
